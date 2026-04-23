@@ -1,0 +1,61 @@
+<div id="contact-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-3xl transition-opacity duration-500">
+    <div class="relative w-full max-w-2xl p-8 md:p-14 apple-glass rounded-[2.5rem] border border-white/10 shadow-[0_0_80px_rgba(168,140,90,0.15)] text-center transform scale-95 transition-transform duration-500 overflow-hidden">
+        
+        <!-- Animated Background Glow inside Modal -->
+        <div class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-[#a88c5a]/10 to-transparent opacity-50 pointer-events-none"></div>
+
+        <!-- Close Button (Programmatic event listener attached in main.js) -->
+        <button id="modal-close" type="button" class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 border border-white/5 text-white/50 hover:text-white transition-all duration-300 z-10">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg>
+        </button>
+        
+        <div class="relative z-10">
+            <div id="modal-header" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#a88c5a]/30 bg-[#a88c5a]/10 text-[#a88c5a] text-[10px] uppercase tracking-widest font-bold mb-6">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                <%= t.mHeader || 'SaaS Onboarding' %>
+            </div>
+            
+            <h2 id="footer-h2" class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight"><%= t.footerH2 %></h2>
+            <p id="footer-p" class="text-white/40 text-sm md:text-base font-medium mb-10 max-w-md mx-auto"><%= t.footerP %></p>
+            
+            <form id="lead-form" class="flex flex-col gap-5 text-left relative">
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="relative group">
+                        <input type="text" name="name" placeholder="Brand / Entity" required class="w-full !bg-black/50 !border !border-white/10 !rounded-xl !p-4 !pl-12 text-sm text-white focus:!border-[#a88c5a] focus:!ring-1 focus:!ring-[#a88c5a] transition-all peer placeholder-transparent">
+                        <label class="absolute left-12 top-[1.05rem] text-sm text-white/30 transition-all peer-focus:-top-2 peer-focus:text-[10px] peer-focus:text-[#a88c5a] peer-valid:-top-2 peer-valid:text-[10px] peer-valid:text-white/50 bg-black px-1 rounded-sm pointer-events-none">Brand / Entity</label>
+                        <svg class="absolute left-4 top-[1.15rem] text-white/20 group-focus-within:text-[#a88c5a] transition-colors pointer-events-none" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <div class="relative group">
+                        <input type="email" name="email" placeholder="Corporate Email" required class="w-full !bg-black/50 !border !border-white/10 !rounded-xl !p-4 !pl-12 text-sm text-white focus:!border-[#a88c5a] focus:!ring-1 focus:!ring-[#a88c5a] transition-all peer placeholder-transparent">
+                        <label class="absolute left-12 top-[1.05rem] text-sm text-white/30 transition-all peer-focus:-top-2 peer-focus:text-[10px] peer-focus:text-[#a88c5a] peer-valid:-top-2 peer-valid:text-[10px] peer-valid:text-white/50 bg-black px-1 rounded-sm pointer-events-none">Corporate Email</label>
+                        <svg class="absolute left-4 top-[1.15rem] text-white/20 group-focus-within:text-[#a88c5a] transition-colors pointer-events-none" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <textarea name="message" rows="3" placeholder="Project Details" required class="w-full !bg-black/50 !border !border-white/10 !rounded-xl !p-4 text-sm text-white focus:!border-[#a88c5a] focus:!ring-1 focus:!ring-[#a88c5a] transition-all peer placeholder-transparent resize-none"></textarea>
+                    <label class="absolute left-4 top-[1.05rem] text-sm text-white/30 transition-all peer-focus:-top-2 peer-focus:text-[10px] peer-focus:text-[#a88c5a] peer-valid:-top-2 peer-valid:text-[10px] peer-valid:text-white/50 bg-black px-1 rounded-sm pointer-events-none">Project Details...</label>
+                </div>
+
+                <div class="flex items-start gap-3 px-1 mt-1">
+                    <div class="relative flex items-center justify-center mt-0.5">
+                        <input type="checkbox" id="privacy-consent" name="consent" required class="peer appearance-none w-4 h-4 border border-white/20 rounded cursor-pointer checked:bg-[#a88c5a] checked:border-[#a88c5a] transition-colors">
+                        <svg class="absolute pointer-events-none opacity-0 peer-checked:opacity-100 w-2.5 h-2.5 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <label for="privacy-consent" class="text-white/40 text-[10px] tracking-widest uppercase cursor-pointer leading-tight flex-1 hover:text-white/60 transition-colors">
+                        <%= t.legal.agree %> <a href="/<%= t.lang %>/legal/privacy" target="_blank" class="text-white/70 hover:text-[#a88c5a] underline underline-offset-4 transition-colors"><%= t.legal.privacy %></a>
+                    </label>
+                </div>
+
+                <div class="mt-4">
+                    <button id="contact-button" type="submit" class="w-full bg-gradient-to-r from-[#a88c5a] to-[#c7aa74] hover:from-[#bfa573] hover:to-[#dec495] text-black font-extrabold py-4 rounded-xl text-[11px] uppercase tracking-[0.2em] transition-all hover:scale-[1.01] active:scale-95 shadow-[0_0_20px_rgba(168,140,90,0.2)] flex justify-center items-center gap-3">
+                        <span><%= t.contact %></span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </div>
+                <!-- Status is placed outside of normal flow to stop jumping -->
+                <div id="form-status" class="absolute -bottom-7 w-full text-center text-[10px] font-bold tracking-[0.2em] uppercase hidden transition-all"></div>
+            </form>
+        </div>
+    </div>
+</div>

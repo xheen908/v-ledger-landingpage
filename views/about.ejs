@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="<%= t.lang %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/coin-icon.png">
+    <title><%- t.aboutUs.title %> | V-LEDGER</title>
+    <meta name="description" content="<%- t.aboutUs.subtitle %>">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Hreflang Clusters -->
+    <link rel="alternate" hreflang="de-de" href="https://V-Ledger.com/de-de/about">
+    <link rel="alternate" hreflang="en-us" href="https://V-Ledger.com/en-us/about">
+    <link rel="alternate" hreflang="vi-vn" href="https://V-Ledger.com/vi-vn/about">
+    <link rel="alternate" hreflang="th-th" href="https://V-Ledger.com/th-th/about">
+    <link rel="alternate" hreflang="zh-cn" href="https://V-Ledger.com/zh-cn/about">
+    <link rel="alternate" hreflang="zh-tw" href="https://V-Ledger.com/zh-tw/about">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <!-- Flag Icons for Header -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
+    <link rel="stylesheet" href="/css/style.css?v=15.0">
+
+    <!-- JSON-LD explicitly defining the Duisburg Headquarters for GEO/SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "V-LEDGER",
+        "alternateName": "V-LEDGER",
+        "url": "https://V-Ledger.com",
+        "foundingLocation": {
+            "@type": "Place",
+            "name": "Port of Duisburg",
+            "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Albertstr. 7",
+            "postalCode": "47059",
+            "addressLocality": "Duisburg",
+            "addressCountry": "DE"
+          }
+        },
+        "description": "Provider of Digital Product Passport (DPP) infrastructure for EU-ESPR compliance."
+      }
+    }
+    </script>
+</head>
+<body class="selection:bg-[#d4af37] selection:text-black overflow-x-hidden">
+    <div class="mesh-bg opacity-30"></div>
+
+    <%- include('partials/header', { t }) %>
+
+    <main class="max-w-5xl mx-auto px-6 py-24 md:py-32 min-h-screen relative z-10">
+        
+        <!-- Hero Section for About -->
+        <div class="text-center mb-20 relative">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#d4af37]/20 blur-[100px] rounded-full pointer-events-none"></div>
+            
+            <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tighter uppercase leading-[0.9]">
+                <%- t.aboutUs.title %>
+            </h1>
+            <p class="text-xl md:text-2xl font-light text-white/70 max-w-2xl mx-auto">
+                <%- t.aboutUs.subtitle %>
+            </p>
+        </div>
+
+        <!-- Content Split Layout -->
+        <div class="grid md:grid-cols-12 gap-12 items-start opacity-0 translate-y-10 animate-fade-in-up" style="animation: fadeInUp 1s ease 0.2s forwards;">
+            <!-- Sticky Sidebar for Visual Anchoring -->
+            <div class="md:col-span-4 md:sticky top-32">
+                <div class="apple-glass p-8 rounded-[2rem] border border-white/10 relative overflow-hidden group hover:border-[#a88c5a]/50 transition-colors duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-[#d4af37]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div class="relative z-10">
+                        <div class="text-[10px] font-bold uppercase tracking-widest text-[#a88c5a] mb-8">
+                            Headquarters
+                        </div>
+                        <div class="text-3xl font-black mb-2 flex items-center gap-3">
+                            DUISBURG
+                            <span class="fi fi-de rounded-sm w-8 h-6 shadow-lg shadow-black/50"></span>
+                        </div>
+                        <div class="text-white/40 text-sm font-medium tracking-wide mb-6">
+                            Europe's Largest Inland Port
+                        </div>
+                        <div class="w-full h-px bg-gradient-to-r from-white/20 to-transparent mb-6"></div>
+                        <div class="text-xs text-white/50 leading-relaxed">
+                            Established directly at the central logistics hub connecting Asian trade routes with the European single market.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Prose Content -->
+            <div class="md:col-span-8 apple-glass p-8 md:p-14 rounded-[3rem] border border-white/10 shadow-2xl hover:shadow-[#a88c5a]/5 transition-shadow duration-700">
+                <div class="prose prose-invert prose-lg max-w-none 
+                            prose-h3:text-2xl prose-h3:font-bold prose-h3:text-[#d4af37] prose-h3:tracking-tight prose-h3:mt-0 prose-h3:mb-4
+                            prose-p:text-white/70 prose-p:leading-relaxed prose-p:font-light prose-p:mb-10 last:prose-p:mb-0
+                            prose-strong:text-white prose-strong:font-semibold">
+                    <%- t.aboutUs.content %>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <%- include('partials/footer', { t }) %>
+
+    <!-- Custom Fade In Animation -->
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation-play-state: paused;
+        }
+        .animate-fade-in-up.is-visible {
+            animation-play-state: running;
+        }
+    </style>
+    <script>
+        // Simple Intersection Observer to trigger animation when scrolled into view
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll('.animate-fade-in-up');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+    <script src="/js/main.js?v=15.7"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="<%= t.lang %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= t.legal[type] %> | V-LEDGER</title>
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO: Canonical and Hreflang Clusters -->
+    <link rel="canonical" href="https://V-Ledger.com/<%= t.lang %>/legal/<%= type %>">
+    <!-- Hreflang Clusters (Global AI Indexing) -->
+    <link rel="alternate" hreflang="de-de" href="https://V-Ledger.com/de-de/legal/<%= type %>">
+    <link rel="alternate" hreflang="en-us" href="https://V-Ledger.com/en-us/legal/<%= type %>">
+    <link rel="alternate" hreflang="es-es" href="https://V-Ledger.com/es-es/legal/<%= type %>">
+    <link rel="alternate" hreflang="vi-vn" href="https://V-Ledger.com/vi-vn/legal/<%= type %>">
+    <link rel="alternate" hreflang="th-th" href="https://V-Ledger.com/th-th/legal/<%= type %>">
+    <link rel="alternate" hreflang="ja-jp" href="https://V-Ledger.com/ja-jp/legal/<%= type %>">
+    <link rel="alternate" hreflang="ko-kr" href="https://V-Ledger.com/ko-kr/legal/<%= type %>">
+    <link rel="alternate" hreflang="hi-in" href="https://V-Ledger.com/hi-in/legal/<%= type %>">
+    <link rel="alternate" hreflang="bn-bd" href="https://V-Ledger.com/bn-bd/legal/<%= type %>">
+    <link rel="alternate" hreflang="zh-cn" href="https://V-Ledger.com/zh-cn/legal/<%= type %>">
+    <link rel="alternate" hreflang="zh-tw" href="https://V-Ledger.com/zh-tw/legal/<%= type %>">
+    <link rel="alternate" hreflang="x-default" href="https://V-Ledger.com/en-us/legal/<%= type %>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css?v=13.3-SSR">
+</head>
+<body class="selection:bg-white/10 overflow-x-hidden">
+    <div class="mesh-bg opacity-30"></div>
+
+    <%- include('partials/header', { t }) %>
+
+    <main class="max-w-4xl mx-auto px-6 py-20 md:py-32 min-h-screen">
+        <div class="mb-12">
+            <a href="/<%= t.lang %>/" class="text-xs font-bold uppercase tracking-widest text-[#a88c5a] hover:opacity-70 transition-opacity">
+                &lsaquo; <%= t.legal.back %>
+            </a>
+        </div>
+
+        <div class="apple-glass p-8 md:p-20 rounded-[3.5rem] border border-white/10 relative overflow-hidden group shadow-2xl">
+            <!-- Decorative Glow -->
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-[#a88c5a]/10 blur-[100px] rounded-full pointer-events-none group-hover:bg-[#a88c5a]/20 transition-all duration-1000"></div>
+            
+            <div class="legal-content text-white/80 leading-relaxed font-medium relative z-10">
+                <%- t.legal.content[type] %>
+            </div>
+        </div>
+    </main>
+
+    <%- include('partials/footer', { t }) %>
+    <script src="/js/main.js?v=15.7"></script>
+</body>
+</html>

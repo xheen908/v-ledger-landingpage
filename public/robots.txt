@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://V-Ledger.com/sitemap.xml

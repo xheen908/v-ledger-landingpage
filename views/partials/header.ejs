@@ -1,0 +1,81 @@
+<nav class="sticky top-0 z-[100] px-8 py-4 flex justify-between items-center apple-glass border-b border-white/5 transition-all duration-500">
+    
+    <!-- Left Section: Burger Menu & Logo (Build 15.6) -->
+    <div class="flex items-center gap-4">
+        <button id="burger-trigger" class="p-2 -ml-2 text-white/50 hover:text-[#a88c5a] transition-colors focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+
+        <div class="flex flex-col">
+            <a href="/<%= t.lang %>/" class="group flex items-center hover:opacity-80 transition-all">
+                <h1 class="text-xl md:text-2xl font-black tracking-tighter italic uppercase leading-none">
+                    <span class="text-yellow-500">V</span><span class="text-white">-LE<span class="relative inline-block">D<span class="absolute -bottom-1.5 left-0 w-full h-[3px] bg-yellow-500 rounded-full"></span></span>GER</span>
+                </h1>
+            </a>
+        </div>
+    </div>
+
+    <!-- Global Language Dropdown (Build 12.1) -->
+    <div class="relative" id="lang-dropdown-wrapper">
+        <button id="lang-menu-trigger" class="flex items-center gap-3 px-5 py-2.5 rounded-full border border-white/10 hover:border-white/20 hover:bg-white/5 transition-all text-[11px] font-bold uppercase tracking-widest text-white/60 hover:text-white group">
+            <% 
+               const flags = { 'de-de': 'de', 'en-us': 'gb', 'es-es': 'es', 'vi-vn': 'vn', 'th-th': 'th', 'ja-jp': 'jp', 'ko-kr': 'kr', 'hi-in': 'in', 'bn-bd': 'bd', 'zh-cn': 'cn', 'zh-tw': 'tw' };
+               const names = { 'de-de': 'DE', 'en-us': 'EN', 'es-es': 'ES', 'vi-vn': 'VI', 'th-th': 'TH', 'ja-jp': 'JP', 'ko-kr': 'KR', 'hi-in': 'HI', 'bn-bd': 'BD', 'zh-cn': 'CN', 'zh-tw': 'TW' };
+            %>
+            <span class="fi fi-<%= flags[t.lang] %> rounded-sm opacity-80 group-hover:opacity-100 transition-opacity"></span>
+            <span><%= names[t.lang] %></span>
+            <svg class="w-2.5 h-2.5 opacity-40 group-hover:opacity-100 group-hover:rotate-180 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+
+        <div id="lang-menu-dropdown" class="absolute right-0 top-full pt-3 w-44 opacity-0 translate-y-2 pointer-events-none transition-all duration-500 z-[110]">
+            <div class="apple-glass rounded-3xl border border-white/10 shadow-2xl overflow-hidden p-2 flex flex-col gap-1">
+                <% Object.entries(names).forEach(([code, name]) => { %>
+                    <a href="/<%= code %>/" class="flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-white/5 transition-all text-[10px] font-bold uppercase tracking-widest <%= t.lang === code ? 'text-[#a88c5a]' : 'text-white/40 hover:text-white' %>">
+                        <span class="fi fi-<%= flags[code] %> rounded-sm <%= t.lang === code ? 'opacity-100' : 'opacity-40 hover:opacity-100' %>"></span>
+                        <span><%= name %></span>
+                    </a>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Sidebar Drawer (Build 15.3) -->
+<div id="sidebar-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[101] opacity-0 pointer-events-none transition-opacity duration-500"></div>
+<aside id="sidebar-drawer" class="fixed top-0 left-0 h-full w-[85vw] max-w-[320px] apple-glass border-r border-[#a88c5a]/20 translate-x-[-100%] transition-transform duration-500 z-[102] flex flex-col p-8">
+    <div class="flex justify-between items-center mb-12">
+        <h2 class="text-[10px] font-black tracking-[0.3em] uppercase text-yellow-500 opacity-90"><%= t.menu || 'MENU' %></h2>
+        <button id="burger-close" class="text-white/50 hover:text-white transition-colors p-2 -mr-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+    </div>
+    
+    <div class="flex flex-col gap-8">
+        <a href="/<%= t.lang %>/" class="text-2xl font-black tracking-tighter uppercase text-white/80 hover:text-[#a88c5a] transition-colors"><%= t.lang === 'de-de' ? 'Startseite' : 'Home' %></a>
+        <a href="/<%= t.lang %>/technology" class="text-2xl font-black tracking-tighter uppercase text-white/80 hover:text-[#a88c5a] transition-colors"><%= t.tech?.nav || 'Technology' %></a>
+        <a href="/<%= t.lang %>/about" class="text-2xl font-black tracking-tighter uppercase text-white/80 hover:text-[#a88c5a] transition-colors"><%= t.aboutUs?.nav || 'About Us' %></a>
+        <a href="/<%= t.lang %>/#faq" class="text-2xl font-black tracking-tighter uppercase text-white/80 hover:text-[#a88c5a] transition-colors"><%= t.faqNav %></a>
+        <button id="menu-contact-trigger" class="text-2xl font-black tracking-tighter uppercase text-white/80 hover:text-[#a88c5a] transition-colors w-fit text-left"><%= t.lang === 'de-de' ? 'Kontakt' : 'Contact' %></button>
+    </div>
+
+    <div class="mt-auto flex flex-col gap-6 pt-10 border-t border-white/5">
+        <!-- Main Verification/Customer Login -->
+        <a href="https://dashboard.v-ledger.com/" class="pill-btn pill-btn-vault w-full py-4 group">
+            <span class="relative z-10"><%= t.login %></span>
+            <div class="btn-slide"></div>
+        </a>
+
+        <!-- Enterprise/Developer Entry -->
+        <a href="https://console.v-ledger.com" class="flex items-center justify-center gap-2 group py-2">
+            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 group-hover:text-[#a88c5a] transition-colors duration-300 flex items-center gap-2">
+                <span class="opacity-40">>_</span> <%= t.manufacturerLogin %>
+            </span>
+        </a>
+
+        <div class="space-y-5 text-[10px] uppercase tracking-widest text-white/20 font-bold mt-4">
+            <a href="/<%= t.lang %>/legal/imprint" class="block hover:text-[#a88c5a] transition-colors"><%= t.legal.imprint %></a>
+            <a href="/<%= t.lang %>/legal/privacy" class="block hover:text-[#a88c5a] transition-colors"><%= t.legal.privacy %></a>
+            <a href="/<%= t.lang %>/legal/terms" class="block hover:text-[#a88c5a] transition-colors"><%= t.legal.terms %></a>
+        </div>
+    </div>
+</aside>

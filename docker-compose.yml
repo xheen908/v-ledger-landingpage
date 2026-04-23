@@ -1,0 +1,30 @@
+services:
+  # Die Landingpage App
+  nodejs-app:
+    build: .
+    container_name: V-Ledger-landing-app
+    restart: unless-stopped
+    ports:
+      - "12000:12000"
+    env_file: .env
+    environment:
+      - NODE_ENV=production
+      - PORT=12000
+    networks:
+      - V-Ledger-network
+
+  # Cloudflare Tunnel
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: V-Ledger-tunnel
+    restart: always
+    env_file: .env
+    environment:
+      - TUNNEL_TOKEN=${CF_TUNNEL_TOKEN}
+    command: tunnel --no-autoupdate run --protocol http2 --token ${CF_TUNNEL_TOKEN}
+    networks:
+      - V-Ledger-network
+
+networks:
+  V-Ledger-network:
+    driver: bridge

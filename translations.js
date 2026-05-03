@@ -51,8 +51,8 @@ const translations = {
         "faqTitle": "Häufig gestellte Fragen (FAQ)",
         "faqs": [
             {
-                "q": "What is a Digital Product Passport (DPP) and how does V-Ledger implement it?",
-                "a": "A Digital Product Passport is the EU-mandated product identity required under ESPR 2027. V-Ledger automatically generates, stores, and manages DPPs — backed by cryptographic NFC hardware and immutable blockchain records."
+                "q": "Was ist ein digitaler Produktpass (DPP) und wie setzt V-Ledger ihn um?",
+                "a": "Ein digitaler Produktpass ist die EU-weit vorgeschriebene Produktidentität gemäß ESPR 2027. V-Ledger generiert, speichert und verwaltet DPPs automatisch — unterstützt durch kryptographische NFC-Hardware und unveränderliche Blockchain-Datensätze."
             },
             {
                 "q": "Warum NXP Secure Hardware?",
@@ -60,27 +60,27 @@ const translations = {
             },
             {
                 "q": "Wie funktionieren Royalties ohne Krypto-Wallet?",
-                "a": "Through ERC-4337 Account Abstraction, our backend handles all complexity. You receive royalty payouts automatically on every certified resale via integrated partner platforms — in EUR or USDT. No wallet, no seed phrase required."
+                "a": "Durch ERC-4337 Account Abstraction übernimmt unser Backend die gesamte Komplexität. Sie erhalten Lizenzgebühren automatisch bei jedem zertifizierten Wiederverkauf über integrierte Partnerplattformen — in EUR oder USDT. Es ist keine Wallet oder Seed-Phrase erforderlich."
             },
             {
                 "q": "Ist die Lösung konform mit der EU-Verordnung 2027 (ESPR)?",
                 "a": "Ja, unsere Plattform ist speziell darauf ausgelegt, die Anforderungen der Ecodesign for Sustainable Products Regulation (ESPR) zu erfüllen, inklusive des obligatorischen Digitalen Produktpasses."
             },
             {
-                "q": "How does V-Ledger differ from other DPP providers?",
-                "a": "V-Ledger is the only platform combining physical hardware authentication (NXP NTAG 424 DNA), automated ERP integration (SAP-ready), and a built-in lifecycle revenue engine. Most DPP providers store data. We monetize it."
+                "q": "Wie unterscheidet sich V-Ledger von anderen DPP-Anbietern?",
+                "a": "V-Ledger ist die einzige Plattform, die physische Hardware-Authentifizierung (NXP NTAG 424 DNA), automatisierte ERP-Integration (SAP-ready) und eine integrierte Lifecycle Revenue Engine kombiniert. Die meisten DPP-Anbieter speichern Daten. Wir monetarisieren sie."
             },
             {
-                "q": "On which platforms does the royalty system work?",
-                "a": "Royalty payouts are triggered on certified resale platforms integrated with the V-Ledger protocol. Unverified private sales (e.g. classifieds) are outside the certified ecosystem and do not trigger automated payouts."
+                "q": "Auf welchen Plattformen funktioniert das Lizenzgebührensystem?",
+                "a": "Auszahlungen von Lizenzgebühren werden auf zertifizierten Wiederverkaufsplattformen ausgelöst, die in das V-Ledger-Protokoll integriert sind. Unverifizierte Privatverkäufe liegen außerhalb des zertifizierten Ökosystems."
             },
             {
-                "q": "What happens if ESPR timelines change?",
-                "a": "V-Ledger is built on the CEN/CENELEC JTC 24 framework, which evolves alongside ESPR. Our architecture is modular — compliance mappings update automatically as standards are finalized."
+                "q": "Was passiert, wenn sich die ESPR-Zeitpläne ändern?",
+                "a": "V-Ledger basiert auf dem CEN/CENELEC JTC 24-Framework, das sich parallel zu ESPR weiterentwickelt. Unsere Architektur ist modular — Compliance-Mappings werden automatisch aktualisiert, sobald Standards finalisiert sind."
             },
             {
-                "q": "Which product categories will be supported beyond 2027?",
-                "a": "Phase 1 (2026-27): Batteries, Textiles, Electronics. Phase 2 (2027-28): Furniture, Tires, Detergents, Paints. Phase 3 (2029-30): Steel, Aluminum, Chemicals."
+                "q": "Welche Produktkategorien werden über 2027 hinaus unterstützt?",
+                "a": "Phase 1 (2026-27): Batterien, Textilien, Elektronik. Phase 2 (2027-28): Möbel, Reifen, Reinigungsmittel, Farben. Phase 3 (2029-30): Stahl, Aluminium, Chemikalien."
             },
             {
                 "q": "Welche Branchen werden aktuell unterstützt?",

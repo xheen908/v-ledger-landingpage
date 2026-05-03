@@ -133,9 +133,9 @@ const translations = {
         "s1h": "Zero-Touch DPP Automation",
         "s1p": "Direct API connection to SAP/ERP systems in under 8 hours. Automated CEN/CENELEC JTC 24 compliance mapping. Your team touches nothing — our infrastructure handles every SKU at industrial scale.",
         "s2h": "Lifecycle Revenue Engine (Layer 1)",
-        "s2p": "A verified €650 resale generates a €32.50 royalty — automatically, without invoice or manual process. The 95/5 model turns your secondary market from an invisible blind spot into a permanent revenue stream.",
+        "s2p": "A verified €650 resale generates a €32.50 royalty — automatically, without invoice or manual process. The 94/5/1 model turns your secondary market from an invisible blind spot into a permanent revenue stream.",
         "p1t": "Layer 1: Resale Royalty",
-        "p1h": "95/5 Revenue Share.",
+        "p1h": "94/5/1 Revenue Share.",
         "p1d": "Trust increases secondary market prices. By certifying authenticity, resale values rise — the seller profits more, and the brand automatically receives 5% on every certified transaction. No invoice. No wallet required.",
         "p2t": "Layer 2: D2C Lifecycle Portal",
         "p2h": "Service-Driven Revenue.",
@@ -197,7 +197,7 @@ const translations = {
             },
             {
                 "q": "On which platforms does the royalty system work?",
-                "a": "Royalty payouts are triggered on certified resale platforms integrated with the V-Ledger protocol. Unverified private sales are outside the certified ecosystem. The 95/5 model means: the seller keeps 95% of the verified value increase — the brand receives 5% automatically, without invoice."
+                "a": "Royalty payouts are triggered on certified resale platforms integrated with the V-Ledger protocol. Unverified private sales are outside the certified ecosystem. The 94/5/1 model means: the seller keeps 94% of the verified value increase — the brand receives 5% automatically, without invoice."
             },
             {
                 "q": "What happens if ESPR timelines change?",
@@ -232,7 +232,7 @@ const translations = {
             "nav": "About Us",
             "title": "The 2030 Circular Economy Standard",
             "subtitle": "Monetizing Trust. Securing Resources. Eliminating Chaos.",
-            "content": "<h3>V-Ledger is headquartered in Duisburg — Europe's largest inland port.</h3><p>We do not view the ESPR 2027 mandate as a compliance burden. We have engineered the infrastructure that transforms it into a 4-layer revenue engine and a permanent competitive advantage.</p><h3>From Organizational Chaos to Strategic Profitability.</h3><p>Current DPP approaches fail because they focus on static data storage. V-Ledger replaces organizational effort with technical automation: Zero-Touch SAP/ERP integration in under 8 hours, automated JTC 24 compliance mapping, and hardware trust anchors that eliminate counterfeiting liability — at industrial scale.</p><h3>The 4-Layer Monetization Stack.</h3><p>Every product lifecycle touchpoint generates revenue: Layer 1 (95/5 Resale Royalty), Layer 2 (D2C Lifecycle Portal with warranty & MaaS), Layer 3 (Digital Green Tokens / Return-to-Loop), Layer 4 (OPEX savings through full automation). We are not just compliant. We are profitable.</p><h3>From 2027 Compliance to 2030 Resource Autonomy.</h3><p>The ESPR mandate is only the beginning. By 2030, the Circular Economy framework will cover every major EU product category. V-Ledger is the only infrastructure engineered to scale horizontally across all four regulatory waves — from Batteries & Textiles today to Steel, Chemicals, and High-Impact Intermediate Products by 2029/30. We are not building a compliance tool. We are building the standard.</p>"
+            "content": "<h3>V-Ledger is headquartered in Duisburg — Europe's largest inland port.</h3><p>We do not view the ESPR 2027 mandate as a compliance burden. We have engineered the infrastructure that transforms it into a 4-layer revenue engine and a permanent competitive advantage.</p><h3>From Organizational Chaos to Strategic Profitability.</h3><p>Current DPP approaches fail because they focus on static data storage. V-Ledger replaces organizational effort with technical automation: Zero-Touch SAP/ERP integration in under 8 hours, automated JTC 24 compliance mapping, and hardware trust anchors that eliminate counterfeiting liability — at industrial scale.</p><h3>The 4-Layer Monetization Stack.</h3><p>Every product lifecycle touchpoint generates revenue: Layer 1 (94/5/1 Resale Royalty), Layer 2 (D2C Lifecycle Portal with warranty & MaaS), Layer 3 (Digital Green Tokens / Return-to-Loop), Layer 4 (OPEX savings through full automation). We are not just compliant. We are profitable.</p><h3>From 2027 Compliance to 2030 Resource Autonomy.</h3><p>The ESPR mandate is only the beginning. By 2030, the Circular Economy framework will cover every major EU product category. V-Ledger is the only infrastructure engineered to scale horizontally across all four regulatory waves — from Batteries & Textiles today to Steel, Chemicals, and High-Impact Intermediate Products by 2029/30. We are not building a compliance tool. We are building the standard.</p>"
         },
         "tech": {
             "nav": "Technology",

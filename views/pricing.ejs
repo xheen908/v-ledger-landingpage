@@ -66,7 +66,8 @@
                         </p>
                         <div class="text-3xl font-black text-white italic mb-2">€0 <span
                                 class="text-sm font-normal text-white/40">/mo</span></div>
-                        <div class="text-[#a88c5a] text-xs font-bold uppercase tracking-wide mb-6">Restricted Volume
+                        <div class="text-[#a88c5a] text-xs font-bold uppercase tracking-wide mb-6">
+                            <%= t.lang==='de-de' ? 'Bis zu 25 Mints / Monat' : 'Up to 25 Mints / month' %>
                         </div>
                         <ul class="space-y-3 mb-8">
                             <li class="flex items-start gap-2 text-xs text-white/70">
@@ -133,6 +134,14 @@
                             <li class="flex items-start gap-2 text-xs text-white/70">
                                 <span class="text-[#a88c5a] font-bold">✓</span>
                                 <%= t.lang==='de-de' ? 'API-Zugriff für Batch-Mints' : 'Batch mint API access' %>
+                            </li>
+                            <li class="flex items-start gap-2 text-xs text-white/70">
+                                <span class="text-[#a88c5a] font-bold">✓</span>
+                                <%= t.lang==='de-de' ? 'Erweiterte Webhooks & Royalties' : 'Advanced Webhooks & Royalties' %>
+                            </li>
+                            <li class="flex items-start gap-2 text-xs text-white/70">
+                                <span class="text-[#a88c5a] font-bold">✓</span>
+                                <%= t.lang==='de-de' ? 'Supply Chain Event Tracking' : 'Supply Chain Event Tracking' %>
                             </li>
                         </ul>
                     </div>

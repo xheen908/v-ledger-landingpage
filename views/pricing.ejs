@@ -150,22 +150,22 @@
         </div>
 
         <!-- Pay-Per-Mint Explained -->
-        <div class="apple-glass border border-white/10 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden mb-16 animate-fade-in-up" style="animation: fadeInUp 1s ease 0.4s forwards;">
+        <div class="w-full apple-glass border border-white/10 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden mb-16 animate-fade-in-up block clear-both" style="animation: fadeInUp 1s ease 0.4s forwards;">
             <div class="absolute top-0 left-0 w-2 h-full bg-[#a88c5a]" />
-            <h2 class="text-2xl font-black italic uppercase text-white mb-4">
+            <h2 class="text-2xl font-black italic uppercase text-white mb-4 whitespace-nowrap">
                 <%= t.lang === 'de-de' ? 'Pay-Per-Mint Erklärt' : 'Pay-Per-Mint Explained' %>
             </h2>
             <p class="text-sm text-white/60 mb-8 max-w-4xl leading-relaxed">
                 <%= t.lang === 'de-de' ? 'Zusätzlich zur monatlichen Grundgebühr nutzt unsere Infrastruktur Smart Contracts, um zirkuläre Produktpass-Daten manipulationssicher On-Chain zu speichern. Jeder im V-Ledger-Ökosystem registrierte digitale Zwilling erzeugt eine geringe Nutzungsgebühr für die gasfreie Account Abstraction-Transaktion und die Metadaten-Verifizierung.' : 'Besides the monthly base subscription fee, our infrastructure leverages smart contracts to secure circular product deposits on-chain. Each digital twin registered in the V-Ledger ecosystem incurs a small usage fee to sponsor the gas-less Account Abstraction transaction and metadata verification on the blockchain.' %>
             </p>
 
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto w-full">
                 <table class="w-full text-left text-sm text-white/70">
                     <thead class="text-[10px] text-white/40 uppercase tracking-widest bg-white/5">
                         <tr>
-                            <th className="px-6 py-4"><%= t.lang === 'de-de' ? 'Volumen-Stufe' : 'Volume Tier' %></th>
-                            <th className="px-6 py-4"><%= t.lang === 'de-de' ? 'Gebühr pro Zwilling' : 'Fee per Digital Twin' %></th>
-                            <th className="px-6 py-4"><%= t.lang === 'de-de' ? 'Enthaltene Transaktionen' : 'Included Transactions' %></th>
+                            <th class="px-6 py-4"><%= t.lang === 'de-de' ? 'Volumen-Stufe' : 'Volume Tier' %></th>
+                            <th class="px-6 py-4"><%= t.lang === 'de-de' ? 'Gebühr pro Zwilling' : 'Fee per Digital Twin' %></th>
+                            <th class="px-6 py-4"><%= t.lang === 'de-de' ? 'Enthaltene Transaktionen' : 'Included Transactions' %></th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-white/5">
